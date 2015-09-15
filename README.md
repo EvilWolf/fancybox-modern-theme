@@ -3,4 +3,4 @@
 -------------------------------
 
 Убраны спрайты, заменены на svg иконки и зашиты в css файл
-[Онлайн демо](evilwolf.github.io/fancybox-modern-theme/)
+[Онлайн демо](http://evilwolf.github.io/fancybox-modern-theme/)
