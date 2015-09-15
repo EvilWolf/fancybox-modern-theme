@@ -119,7 +119,7 @@
 .fancybox-nav {
 	position: absolute;
 	top: 0;
-	width: 5%;
+	width: 75px;
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
@@ -148,15 +148,11 @@
 }
 
 .fancybox-prev span {
-	left: 10px;
+	left: 18px;
 }
 
 .fancybox-next span {
-	right: 10px;
-}
-
-.fancybox-nav:hover span {
-	visibility: visible;
+	right: 18px;
 }
 
 .fancybox-tmp {
