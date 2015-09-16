@@ -138,7 +138,7 @@
 			// HTML templates
 			tpl: {
 				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
-				image    : '<img class="fancybox-image" src="{href}" alt="" />',
+				image    : '<img class="fancybox-image" src="{href}" alt="" /><a class="fancybox-image-next-overwrap" href="javascript:$.fancybox.next();"></a><div class="fancybox-gallery-info"></div>"',
 				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
@@ -1388,6 +1388,11 @@
 
 			if (!iframe && current.autoHeight && height > minHeight && height < maxHeight && !canExpand) {
 				inner.height('auto');
+			}
+
+			if (current.group.length > 1) {
+				$('.fancybox-gallery-info', wrap).text(current.index + 1  + '/' + current.group.length).addClass('show');
+				$('.fancybox-image-next-overwrap', wrap).addClass('show');
 			}
 		},
 
